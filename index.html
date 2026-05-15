@@ -226,10 +226,11 @@
         ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--accent-gold); }
 
-        /* Central Logo (Slightly larger, responsive) */
+        /* Central Logo (Responsive & Fit to screen) */
         .qantica-logo {
             width: 100%;
-            max-width: 240px; /* Increased from 200px to 240px */
+            max-width: 480px; 
+            max-height: 35vh; /* Restricts height so it doesn't break the layout vertically */
             height: auto;
             object-fit: contain;
             margin: 0 auto 1.5rem auto;
@@ -247,10 +248,12 @@
 
     <!-- SLIDE 1: COVER -->
     <div class="slide active" id="slide-1">
-        <div class="slide-content text-center items-center h-full">
+        <!-- Slight blur reduction via inline style to keep it elegant but slightly sharper -->
+        <div class="slide-orb bg-amber-600/20 w-[800px] h-[800px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="filter: blur(90px);"></div>
+        <div class="slide-content text-center items-center flex flex-col justify-center h-full max-h-[85vh]">
             <img src="qantica.png" alt="QANTICA Logo" class="qantica-logo" onerror="this.outerHTML='<h1 class=\'text-[4rem] md:text-[8rem] font-black text-gradient leading-none mb-4 tracking-tighter\'>QANTICA</h1>'">
             
-            <h2 class="text-sm md:text-2xl font-light tracking-[0.25em] text-gray-200 mb-6 uppercase mt-6">We improve IP before production</h2>
+            <h2 class="text-sm md:text-2xl font-light tracking-[0.25em] text-gray-200 mb-6 uppercase mt-2 md:mt-6">We improve IP before production</h2>
             <div class="h-px w-16 bg-gradient-to-r from-transparent via-yellow-500 to-transparent mx-auto mb-6"></div>
             <p class="text-sm md:text-lg text-gray-500 font-light tracking-wide max-w-xl mx-auto px-4">Transforming ideas into scalable IP before they reach the market.</p>
         </div>
@@ -258,6 +261,7 @@
 
     <!-- SLIDE 2: THE PROBLEM / THE SOLUTION -->
     <div class="slide" id="slide-2">
+        <div class="slide-orb bg-amber-600/20 w-[600px] h-[600px] top-1/2 right-1/4 -translate-y-1/2"></div>
         <div class="slide-content">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center min-h-full">
                 
@@ -305,6 +309,7 @@
 
     <!-- SLIDE 3: THE PROCESS -->
     <div class="slide" id="slide-3">
+        <div class="slide-orb bg-amber-600/20 w-[700px] h-[700px] bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4"></div>
         <div class="slide-content">
             <div class="text-center mb-8 md:mb-10">
                 <span class="tag">The Qantica Process</span>
@@ -339,6 +344,7 @@
 
     <!-- SLIDE 4: ENTRY FILTER WITH PROJECTION -->
     <div class="slide" id="slide-4">
+        <div class="slide-orb bg-amber-600/20 w-[600px] h-[600px] top-1/2 right-1/4 -translate-y-1/2"></div>
         <div class="slide-content relative h-full flex flex-col">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-10 items-center flex-1">
                 
@@ -462,6 +468,7 @@
 
     <!-- SLIDE 6: HOW IT WORKS IN STEPS -->
     <div class="slide" id="slide-6">
+        <div class="slide-orb bg-amber-600/20 w-[800px] h-[400px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
         <div class="slide-content">
             <div class="text-center mb-10 md:mb-14">
                 <span class="tag">QIP The Method</span>
@@ -618,6 +625,7 @@
 
     <!-- SLIDE 9: VALUE CYCLE -->
     <div class="slide" id="slide-9">
+        <div class="slide-orb bg-amber-600/20 w-[700px] h-[500px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
         <div class="slide-content">
             <div class="text-center mb-6 md:mb-8">
                 <span class="tag">The Value Cycle</span>
@@ -707,6 +715,7 @@
 
     <!-- SLIDE 11: ALTERNATIVES -->
     <div class="slide" id="slide-11">
+        <div class="slide-orb bg-amber-600/20 w-[600px] h-[600px] top-1/2 right-1/4 -translate-y-1/2"></div>
         <div class="slide-content">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-10 items-start">
                 
@@ -765,71 +774,75 @@
     <!-- SLIDE 12: REAL CASES (WRITERS TESTS) -->
     <div class="slide" id="slide-12">
         <div class="slide-orb bg-amber-600/10 w-[800px] h-[500px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-        <div class="slide-content">
-            <div class="text-center mb-8 md:mb-12">
+        <div class="slide-content h-full flex flex-col justify-center">
+            <div class="text-center mb-6 md:mb-8">
                 <span class="tag">Writers Tests</span>
-                <h2 class="apple-heading text-white mb-3 md:mb-4 leading-tight">Real authors. Real feedback.<br>A method put to the test.</h2>
+                <h2 class="apple-heading text-white mb-2 md:mb-4 leading-tight">Real authors. Real feedback.<br>A method put to the test.</h2>
                 <p class="text-sm md:text-base text-gray-400 font-light max-w-3xl mx-auto px-4">Screenwriters and creators who worked with Qantica share how they experienced the process and what value they found in the method.</p>
             </div>
 
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 flex-1">
                 
                 <!-- 1. Leandro -->
-                <div class="glass-panel p-4 md:p-6 flex flex-col items-center text-center group">
-                    <div class="w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-white/10 mb-3 md:mb-4 group-hover:border-yellow-500 transition-colors bg-charcoal shrink-0">
+                <div class="glass-panel p-4 md:p-5 flex flex-col items-center text-center group h-full">
+                    <div class="w-14 h-14 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-white/10 mb-3 group-hover:border-yellow-500 transition-colors bg-charcoal shrink-0">
                         <img src="Leandro.png" alt="Leandro Filozof" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23666\' stroke-width=\'1\'><circle cx=\'12\' cy=\'8\' r=\'4\'/><path d=\'M20 21a8 8 0 00-16 0\'/></svg>'">
                     </div>
-                    <h3 class="text-sm md:text-lg text-white font-medium mb-1">Leandro Filozof</h3>
-                    <p class="text-[8px] md:text-[9px] text-gray-500 uppercase tracking-widest mb-4 md:mb-6">Screenwriter</p>
-                    <a href="https://www.imdb.com/name/nm9854799/" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center gap-1.5 md:gap-2 bg-[#F5C518] hover:bg-[#E2B616] text-black px-3 md:px-4 py-1.5 md:py-2 rounded-md text-[10px] md:text-xs font-black transition-colors">
+                    <h3 class="text-sm md:text-base text-white font-medium mb-1">Leandro Filozof</h3>
+                    <p class="text-[8px] md:text-[9px] text-gray-500 uppercase tracking-widest mb-3 md:mb-4">Screenwriter</p>
+                    <p class="text-[9px] md:text-[10px] text-gray-400 font-light italic leading-relaxed mb-4 flex-1">"I thought it would be a learning process about my scripts and my writing — a fun journey, and it truly was."</p>
+                    <a href="https://www.imdb.com/name/nm9854799/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#F5C518] hover:bg-[#E2B616] text-black px-3 py-1.5 rounded-md text-[10px] font-black transition-colors w-max mx-auto">
                         IMDb
-                        <svg class="w-2.5 h-2.5 md:w-3 md:h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                     </a>
                 </div>
 
                 <!-- 2. Pablo -->
-                <div class="glass-panel p-4 md:p-6 flex flex-col items-center text-center group">
-                    <div class="w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-white/10 mb-3 md:mb-4 group-hover:border-yellow-500 transition-colors bg-charcoal shrink-0">
+                <div class="glass-panel p-4 md:p-5 flex flex-col items-center text-center group h-full">
+                    <div class="w-14 h-14 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-white/10 mb-3 group-hover:border-yellow-500 transition-colors bg-charcoal shrink-0">
                         <img src="Pablo.png" alt="Pablo Flores" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23666\' stroke-width=\'1\'><circle cx=\'12\' cy=\'8\' r=\'4\'/><path d=\'M20 21a8 8 0 00-16 0\'/></svg>'">
                     </div>
-                    <h3 class="text-sm md:text-lg text-white font-medium mb-1">Pablo Flores</h3>
-                    <p class="text-[8px] md:text-[9px] text-gray-500 uppercase tracking-widest mb-4 md:mb-6">Screenwriter / Producer</p>
-                    <a href="https://www.imdb.com/name/nm12896249/" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center gap-1.5 md:gap-2 bg-[#F5C518] hover:bg-[#E2B616] text-black px-3 md:px-4 py-1.5 md:py-2 rounded-md text-[10px] md:text-xs font-black transition-colors">
+                    <h3 class="text-sm md:text-base text-white font-medium mb-1">Pablo Flores</h3>
+                    <p class="text-[8px] md:text-[9px] text-gray-500 uppercase tracking-widest mb-3 md:mb-4">Screenwriter / Producer</p>
+                    <p class="text-[9px] md:text-[10px] text-gray-400 font-light italic leading-relaxed mb-4 flex-1">"I was genuinely surprised by the level of detail in each analysis."</p>
+                    <a href="https://www.imdb.com/name/nm12896249/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#F5C518] hover:bg-[#E2B616] text-black px-3 py-1.5 rounded-md text-[10px] font-black transition-colors w-max mx-auto">
                         IMDb
-                        <svg class="w-2.5 h-2.5 md:w-3 md:h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                     </a>
                 </div>
 
                 <!-- 3. Natalia -->
-                <div class="glass-panel p-4 md:p-6 flex flex-col items-center text-center group">
-                    <div class="w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-white/10 mb-3 md:mb-4 group-hover:border-yellow-500 transition-colors bg-charcoal shrink-0">
+                <div class="glass-panel p-4 md:p-5 flex flex-col items-center text-center group h-full">
+                    <div class="w-14 h-14 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-white/10 mb-3 group-hover:border-yellow-500 transition-colors bg-charcoal shrink-0">
                         <img src="Natalia.png" alt="Natalia Torres" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23666\' stroke-width=\'1\'><circle cx=\'12\' cy=\'8\' r=\'4\'/><path d=\'M20 21a8 8 0 00-16 0\'/></svg>'">
                     </div>
-                    <h3 class="text-sm md:text-lg text-white font-medium mb-1">Natalia Torres</h3>
-                    <p class="text-[8px] md:text-[9px] text-gray-500 uppercase tracking-widest mb-4 md:mb-6">Screenwriter / Author</p>
-                    <a href="https://www.imdb.com/name/nm1678325/" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center gap-1.5 md:gap-2 bg-[#F5C518] hover:bg-[#E2B616] text-black px-3 md:px-4 py-1.5 md:py-2 rounded-md text-[10px] md:text-xs font-black transition-colors">
+                    <h3 class="text-sm md:text-base text-white font-medium mb-1">Natalia Torres</h3>
+                    <p class="text-[8px] md:text-[9px] text-gray-500 uppercase tracking-widest mb-3 md:mb-4">Screenwriter / Author</p>
+                    <p class="text-[9px] md:text-[10px] text-gray-400 font-light italic leading-relaxed mb-4 flex-1">"Qantica helped me realize that I’d like to trust my own voice more, without relying so heavily on external validation."</p>
+                    <a href="https://www.imdb.com/name/nm1678325/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#F5C518] hover:bg-[#E2B616] text-black px-3 py-1.5 rounded-md text-[10px] font-black transition-colors w-max mx-auto">
                         IMDb
-                        <svg class="w-2.5 h-2.5 md:w-3 md:h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                     </a>
                 </div>
 
                 <!-- 4. Gabriel -->
-                <div class="glass-panel p-4 md:p-6 flex flex-col items-center text-center group">
-                    <div class="w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-white/10 mb-3 md:mb-4 group-hover:border-yellow-500 transition-colors bg-charcoal shrink-0">
+                <div class="glass-panel p-4 md:p-5 flex flex-col items-center text-center group h-full">
+                    <div class="w-14 h-14 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-white/10 mb-3 group-hover:border-yellow-500 transition-colors bg-charcoal shrink-0">
                         <img src="Gabriel.png" alt="Gabriel Macías" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23666\' stroke-width=\'1\'><circle cx=\'12\' cy=\'8\' r=\'4\'/><path d=\'M20 21a8 8 0 00-16 0\'/></svg>'">
                     </div>
-                    <h3 class="text-sm md:text-lg text-white font-medium mb-1">Gabriel Macías</h3>
-                    <p class="text-[8px] md:text-[9px] text-gray-500 uppercase tracking-widest mb-4 md:mb-6">Screenwriter</p>
-                    <a href="https://www.imdb.com/name/nm0989224/" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center gap-1.5 md:gap-2 bg-[#F5C518] hover:bg-[#E2B616] text-black px-3 md:px-4 py-1.5 md:py-2 rounded-md text-[10px] md:text-xs font-black transition-colors">
+                    <h3 class="text-sm md:text-base text-white font-medium mb-1">Gabriel Macías</h3>
+                    <p class="text-[8px] md:text-[9px] text-gray-500 uppercase tracking-widest mb-3 md:mb-4">Screenwriter</p>
+                    <p class="text-[9px] md:text-[10px] text-gray-400 font-light italic leading-relaxed mb-4 flex-1">"An extraordinary platform that expands awareness, and I’m excited to be part of this global project."</p>
+                    <a href="https://www.imdb.com/name/nm0989224/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#F5C518] hover:bg-[#E2B616] text-black px-3 py-1.5 rounded-md text-[10px] font-black transition-colors w-max mx-auto">
                         IMDb
-                        <svg class="w-2.5 h-2.5 md:w-3 md:h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                     </a>
                 </div>
 
             </div>
             
-            <div class="mt-8 md:mt-10 text-center">
-                <span class="text-[9px] md:text-[10px] text-yellow-500 bg-yellow-500/10 border border-yellow-500/20 px-4 md:px-6 py-2 md:py-2.5 rounded-full uppercase tracking-widest font-bold inline-block">
+            <div class="mt-6 text-center">
+                <span class="text-[9px] md:text-[10px] text-yellow-500 bg-yellow-500/10 border border-yellow-500/20 px-4 md:px-6 py-2 rounded-full uppercase tracking-widest font-bold inline-block">
                     More than 100+ creators are already joining
                 </span>
             </div>
@@ -838,11 +851,12 @@
 
     <!-- SLIDE 13: CLOSING -->
     <div class="slide" id="slide-13">
-        <div class="slide-content text-center items-center h-full">
+        <div class="slide-orb bg-amber-600/20 w-[800px] h-[800px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="slide-content text-center items-center h-full flex flex-col justify-center max-h-[85vh]">
             
             <img src="qantica.png" alt="QANTICA Logo" class="qantica-logo opacity-90" onerror="this.outerHTML='<h1 class=\'text-[4rem] md:text-[8rem] font-black text-gradient leading-none mb-4 tracking-tighter\'>QANTICA</h1>'">
             
-            <h2 class="text-lg md:text-3xl text-white font-light tracking-tight mb-4 md:mb-6 max-w-3xl mx-auto leading-tight mt-4 md:mt-6">The future of entertainment begins before production.</h2>
+            <h2 class="text-lg md:text-3xl text-white font-light tracking-tight mb-4 md:mb-6 max-w-3xl mx-auto leading-tight mt-2 md:mt-6">The future of entertainment begins before production.</h2>
             <p class="text-[10px] md:text-sm font-medium text-gray-500 tracking-[0.3em] uppercase">Developing smarter IP.</p>
         </div>
     </div>
