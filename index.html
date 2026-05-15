@@ -226,14 +226,14 @@
         ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--accent-gold); }
 
-        /* Central Logo (Responsive & Fit to screen) */
+        /* Central Logo (Much larger, perfectly constrained vertically) */
         .qantica-logo {
             width: 100%;
-            max-width: 480px; 
-            max-height: 35vh; /* Restricts height so it doesn't break the layout vertically */
+            max-width: 650px; /* Increased significantly */
+            max-height: 45vh; /* Adjusted to allow growth without pushing text out of view */
             height: auto;
             object-fit: contain;
-            margin: 0 auto 1.5rem auto;
+            margin: 0 auto 1rem auto; /* Tighter bottom margin to save space */
             filter: drop-shadow(0 0 20px rgba(250, 204, 21, 0.15));
         }
     </style>
@@ -251,10 +251,10 @@
         <!-- Slight blur reduction via inline style to keep it elegant but slightly sharper -->
         <div class="slide-orb bg-amber-600/20 w-[800px] h-[800px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="filter: blur(90px);"></div>
         <div class="slide-content text-center items-center flex flex-col justify-center h-full max-h-[85vh]">
-            <img src="qantica.png" alt="QANTICA Logo" class="qantica-logo" onerror="this.outerHTML='<h1 class=\'text-[4rem] md:text-[8rem] font-black text-gradient leading-none mb-4 tracking-tighter\'>QANTICA</h1>'">
+            <img src="qantica.png" alt="QANTICA Logo" class="qantica-logo" onerror="this.outerHTML='<h1 class=\'text-[5rem] md:text-[9rem] font-black text-gradient leading-none mb-2 tracking-tighter\'>QANTICA</h1>'">
             
-            <h2 class="text-sm md:text-2xl font-light tracking-[0.25em] text-gray-200 mb-6 uppercase mt-2 md:mt-6">We improve IP before production</h2>
-            <div class="h-px w-16 bg-gradient-to-r from-transparent via-yellow-500 to-transparent mx-auto mb-6"></div>
+            <h2 class="text-sm md:text-2xl font-light tracking-[0.25em] text-gray-200 mb-4 uppercase mt-2">We improve stories before production</h2>
+            <div class="h-px w-16 bg-gradient-to-r from-transparent via-yellow-500 to-transparent mx-auto mb-4"></div>
             <p class="text-sm md:text-lg text-gray-500 font-light tracking-wide max-w-xl mx-auto px-4">Transforming ideas into scalable IP before they reach the market.</p>
         </div>
     </div>
@@ -625,7 +625,6 @@
 
     <!-- SLIDE 9: VALUE CYCLE -->
     <div class="slide" id="slide-9">
-        <div class="slide-orb bg-amber-600/20 w-[700px] h-[500px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
         <div class="slide-content">
             <div class="text-center mb-6 md:mb-8">
                 <span class="tag">The Value Cycle</span>
@@ -841,8 +840,8 @@
 
             </div>
             
-            <div class="mt-6 text-center">
-                <span class="text-[9px] md:text-[10px] text-yellow-500 bg-yellow-500/10 border border-yellow-500/20 px-4 md:px-6 py-2 rounded-full uppercase tracking-widest font-bold inline-block">
+            <div class="mt-8 md:mt-10 text-center">
+                <span class="text-[9px] md:text-[10px] text-yellow-500 bg-yellow-500/10 border border-yellow-500/20 px-4 md:px-6 py-2 md:py-2.5 rounded-full uppercase tracking-widest font-bold inline-block">
                     More than 100+ creators are already joining
                 </span>
             </div>
