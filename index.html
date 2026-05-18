@@ -43,7 +43,7 @@
             animation: float 25s ease-in-out infinite alternate;
         }
 
-        /* Specific Slide Orbs (Dark Amber) */
+        /* Specific Slide Orbs */
         .slide-orb {
             position: absolute;
             border-radius: 50%;
@@ -84,7 +84,7 @@
             display: none;
             height: 100vh;
             width: 100vw;
-            padding: 24px 5vw; /* Adjusted for mobile */
+            padding: 24px 5vw; 
             box-sizing: border-box;
             position: relative;
             overflow-y: auto;
@@ -115,7 +115,7 @@
             justify-content: center;
             position: relative;
             z-index: 10;
-            padding: 20px 0;
+            padding: 10px 0;
         }
 
         @keyframes fadeIn {
@@ -167,7 +167,7 @@
             text-transform: uppercase;
             letter-spacing: 0.25em;
             color: var(--accent-gold);
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             font-weight: 600;
             display: inline-block;
         }
@@ -209,7 +209,7 @@
             z-index: 1;
         }
 
-        /* Pro Icons - Ultra Minimalist */
+        /* Pro Icons */
         .icon-pro {
             width: 24px;
             height: 24px;
@@ -226,14 +226,14 @@
         ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--accent-gold); }
 
-        /* Central Logo (Much larger, perfectly constrained vertically) */
+        /* Central Logo */
         .qantica-logo {
             width: 100%;
-            max-width: 650px; /* Increased significantly */
-            max-height: 45vh; /* Adjusted to allow growth without pushing text out of view */
+            max-width: 650px; 
+            max-height: 25vh; 
             height: auto;
             object-fit: contain;
-            margin: 0 auto 1rem auto; /* Tighter bottom margin to save space */
+            margin: 0 auto 1.5rem auto;
             filter: drop-shadow(0 0 20px rgba(250, 204, 21, 0.15));
         }
     </style>
@@ -248,9 +248,8 @@
 
     <!-- SLIDE 1: COVER -->
     <div class="slide active" id="slide-1">
-        <!-- Slight blur reduction via inline style to keep it elegant but slightly sharper -->
-        <div class="slide-orb bg-amber-600/20 w-[800px] h-[800px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="filter: blur(90px);"></div>
-        <div class="slide-content text-center items-center flex flex-col justify-center h-full max-h-[85vh]">
+        <div class="slide-orb bg-amber-600/20 w-[800px] h-[800px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="filter: blur(60px);"></div>
+        <div class="slide-content text-center items-center flex flex-col justify-center h-full">
             <img src="qantica.png" alt="QANTICA Logo" class="qantica-logo" onerror="this.outerHTML='<h1 class=\'text-[5rem] md:text-[9rem] font-black text-gradient leading-none mb-2 tracking-tighter\'>QANTICA</h1>'">
             
             <h2 class="text-sm md:text-2xl font-light tracking-[0.25em] text-gray-200 mb-4 uppercase mt-2">We improve stories before production</h2>
@@ -269,7 +268,7 @@
                     <span class="tag opacity-70">The bridge between creator and industry</span>
                     <h2 class="apple-heading text-white mb-4 md:mb-6">The creative industry faces an efficiency crisis.</h2>
                     <p class="text-gray-400 text-base md:text-lg leading-relaxed font-light border-l border-red-500/50 pl-4 md:pl-5">
-                        <strong class="text-white text-2xl md:text-3xl font-medium">98%</strong> of approved projects fail due to subjective and manual processes.
+                        Approved projects fail due to subjective and manual processes.
                     </p>
                 </div>
                 
@@ -283,21 +282,21 @@
                             <svg class="icon-pro shrink-0 mt-0.5" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
                             <div>
                                 <h3 class="text-white font-medium text-sm md:text-base">Operational agility</h3>
-                                <p class="text-gray-500 font-light text-xs md:text-sm mt-1">Reduces project analysis time from months to days.</p>
+                                <p class="text-gray-500 font-light text-sm mt-1">Reduces project analysis time from months to days.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4 md:gap-5">
                             <svg class="icon-pro shrink-0 mt-0.5" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                             <div>
                                 <h3 class="text-white font-medium text-sm md:text-base">Certified quality</h3>
-                                <p class="text-gray-500 font-light text-xs md:text-sm mt-1">Guarantees scripts without basic structural flaws.</p>
+                                <p class="text-gray-500 font-light text-sm mt-1">Guarantees scripts without basic structural flaws.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4 md:gap-5">
                             <svg class="icon-pro shrink-0 mt-0.5" viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="4"/><polyline points="5 11 12 4 19 11"/></svg>
                             <div>
                                 <h3 class="text-white font-medium text-sm md:text-base">Scalability</h3>
-                                <p class="text-gray-500 font-light text-xs md:text-sm mt-1">Capacity to process massive volumes of global IP.</p>
+                                <p class="text-gray-500 font-light text-sm mt-1">Capacity to process massive volumes of global IP.</p>
                             </div>
                         </div>
                     </div>
@@ -310,56 +309,199 @@
     <!-- SLIDE 3: THE PROCESS -->
     <div class="slide" id="slide-3">
         <div class="slide-orb bg-amber-600/20 w-[700px] h-[700px] bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4"></div>
-        <div class="slide-content">
-            <div class="text-center mb-8 md:mb-10">
+        <div class="slide-content flex flex-col justify-center h-full">
+            <div class="text-center mb-6 md:mb-10">
                 <span class="tag">The Qantica Process</span>
-                <h2 class="apple-heading text-gradient mb-4">The agile system to scale quality IP</h2>
-                <p class="text-sm md:text-base text-gray-400 font-light max-w-3xl mx-auto px-2">Qantica works with writers, not over them. An industrializable process line that sustains volume without losing standards.</p>
+                <h2 class="apple-heading text-white mb-2">Qantica works with writers, not over them.</h2>
+                <p class="text-sm md:text-base text-gray-400 font-light max-w-3xl mx-auto px-2">An industrializable process line that sustains volume without losing standards.</p>
             </div>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-10">
                 <div class="glass-panel p-6 md:p-8 flex flex-col h-full">
                     <svg class="icon-pro" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-                    <h3 class="text-[10px] md:text-[11px] text-yellow-500 font-bold uppercase tracking-widest mb-3 md:mb-4 border-b border-white/10 pb-2 md:pb-3">Process, not product</h3>
-                    <p class="text-sm text-white font-light leading-relaxed mb-4">Reduced times, well-defined stages, and traceable outputs.</p>
-                    <p class="text-[10px] md:text-[11px] text-gray-500 mt-auto pt-4 border-t border-white/5">Every IP enters, goes through the pipeline, and comes out classified. Repeatable in method, unique in result. Scalable and consistent.</p>
+                    <h3 class="text-[11px] md:text-xs text-yellow-500 font-bold uppercase tracking-widest mb-3 border-b border-white/10 pb-3">Built as a process, not a product</h3>
+                    <p class="text-xs md:text-sm text-white font-light leading-relaxed mb-4">Reduced timelines, clearly defined stages, and traceable outputs.</p>
+                    <p class="text-[11px] md:text-xs text-gray-400 mt-auto pt-4 border-t border-white/5">Each IP enters, moves through the pipeline, and exits classified. Predictable and repeatable.</p>
                 </div>
 
                 <div class="glass-panel p-6 md:p-8 flex flex-col h-full">
                     <svg class="icon-pro" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                    <h3 class="text-[10px] md:text-[11px] text-yellow-500 font-bold uppercase tracking-widest mb-3 md:mb-4 border-b border-white/10 pb-2 md:pb-3">The writer as the protagonist</h3>
-                    <p class="text-sm text-white font-light leading-relaxed mb-4">The Tutor acts as a <strong class="text-yellow-500 font-medium">digital companion</strong> designed to make the author think.</p>
-                    <p class="text-[10px] md:text-[11px] text-gray-400 mt-auto pt-4 border-t border-white/5">The focus is the writer; technology assists to extract their maximum potential.</p>
+                    <h3 class="text-[11px] md:text-xs text-yellow-500 font-bold uppercase tracking-widest mb-3 border-b border-white/10 pb-3">The writer as the protagonist</h3>
+                    <p class="text-xs md:text-sm text-white font-light leading-relaxed mb-4">Authorship always remains entirely with the writer.</p>
+                    <p class="text-[11px] md:text-xs text-gray-400 mt-auto pt-4 border-t border-white/5">The system accompanies the work throughout its development.</p>
                 </div>
 
                 <div class="glass-panel p-6 md:p-8 flex flex-col h-full sm:col-span-2 md:col-span-1">
                     <svg class="icon-pro" viewBox="0 0 24 24"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
-                    <h3 class="text-[10px] md:text-[11px] text-yellow-500 font-bold uppercase tracking-widest mb-3 md:mb-4 border-b border-white/10 pb-2 md:pb-3">Simultaneous volume and quality</h3>
-                    <p class="text-sm text-white font-light leading-relaxed mb-4">The industry today chooses between reading a lot poorly or reading a little well.</p>
-                    <p class="text-[10px] md:text-[11px] text-gray-500 mt-auto pt-4 border-t border-white/5">Qantica solves that trade-off with technological infrastructure.</p>
+                    <h3 class="text-[11px] md:text-xs text-yellow-500 font-bold uppercase tracking-widest mb-3 border-b border-white/10 pb-3">Volume and Quality, Simultaneously</h3>
+                    <p class="text-xs md:text-sm text-white font-light leading-relaxed mb-4">Thousands of IPs fail to receive proper evaluation every year.</p>
+                    <p class="text-[11px] md:text-xs text-gray-400 mt-auto pt-4 border-t border-white/5">Qantica gives them a structured path in, processing at scale without sacrificing analytical depth. Every IP that enters the pipeline receives a complete reading.</p>
                 </div>
+            </div>
+
+            <div class="text-center mt-auto pb-4">
+                <span class="text-white font-light text-sm md:text-lg block mb-2">The industry today chooses between scale and depth.</span>
+                <span class="text-gradient text-xl md:text-3xl font-black block">Qantica resolves that trade-off through infrastructure.</span>
             </div>
         </div>
     </div>
 
-    <!-- SLIDE 4: ENTRY FILTER WITH PROJECTION -->
+    <!-- SLIDE 4: ARCHITECTURE (QSS, QIP, MARKET) -->
     <div class="slide" id="slide-4">
+        <div class="slide-orb bg-amber-600/20 w-[700px] h-[500px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="slide-content h-full flex flex-col justify-center">
+            
+            <div class="text-center mb-6">
+                <span class="tag">The Value Cycle</span>
+                <h2 class="apple-heading text-white mb-2">Qantica’s Architecture Applied to IP</h2>
+                <p class="text-sm md:text-base text-gray-400 font-light max-w-2xl mx-auto">A unified intelligence layer connecting two operational systems.</p>
+                <p class="text-xs md:text-sm text-yellow-500 font-medium mt-2">QSS analyzes, QIP improves, and the Marketplace monetizes.</p>
+            </div>
+            
+            <div class="w-full max-w-5xl mx-auto flex flex-col gap-4">
+                
+                <!-- Top Section: QSS (Yellow Accent) -->
+                <div class="glass-panel p-5 border-t-2 border-t-yellow-500 bg-yellow-500/5 shadow-[0_0_30px_rgba(250,204,21,0.08)]">
+                    <h3 class="text-lg md:text-xl font-black text-yellow-500 mb-1 text-center">QSS: QANTICA SMART SYSTEM</h3>
+                    <p class="text-[10px] md:text-[11px] text-yellow-500/80 uppercase tracking-widest mb-4 text-center">Market Analysis · 3 LEVELS</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                        <div>
+                            <strong class="text-white text-[11px] md:text-xs uppercase tracking-wider block mb-1">N1 — DEVELOPMENT</strong>
+                            <p class="text-[11px] md:text-xs text-gray-400 font-light leading-relaxed">A transmedia proposal the market currently lacks: budgeting, scalability, gaming, music, merchandising.</p>
+                        </div>
+                        <div>
+                            <strong class="text-white text-[11px] md:text-xs uppercase tracking-wider block mb-1">N2 — MARKETING</strong>
+                            <p class="text-[11px] md:text-xs text-gray-400 font-light leading-relaxed">Cross functional interaction between market, creators and social media.</p>
+                        </div>
+                        <div>
+                            <strong class="text-white text-[11px] md:text-xs uppercase tracking-wider block mb-1">N3 — DISTRIBUTION</strong>
+                            <p class="text-[11px] md:text-xs text-gray-400 font-light leading-relaxed">Auction infrastructure. Distribution channel mapping and commercialization pathways.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Connector -->
+                <div class="flex justify-center -my-2 relative z-20">
+                    <div class="bg-[#111113] border border-yellow-500/50 text-yellow-500 px-3 py-1 rounded-full text-[10px] md:text-[11px] font-bold z-10 flex items-center gap-1">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+                        INTEGRATES WITH
+                    </div>
+                    <div class="absolute top-0 bottom-0 w-px bg-yellow-500/30 -z-10"></div>
+                </div>
+
+                <!-- Bottom Section: QIP & Market -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- QIP -->
+                    <div class="glass-panel p-5">
+                        <h3 class="text-base md:text-lg font-black text-white mb-1">QIP The Method</h3>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 uppercase tracking-widest mb-3">IP Improvement</p>
+                        <ul class="text-[11px] md:text-xs text-gray-300 font-light space-y-2">
+                            <li class="flex items-center"><span class="text-yellow-500 mr-2 text-xs">•</span> Tutor</li>
+                            <li class="flex items-center"><span class="text-yellow-500 mr-2 text-xs">•</span> Narrative Analysis</li>
+                            <li class="flex items-center"><span class="text-yellow-500 mr-2 text-xs">•</span> Gaming Potential Evaluation</li>
+                            <li class="flex items-center"><span class="text-yellow-500 mr-2 text-xs">•</span> Blockchain Authorship Certification</li>
+                        </ul>
+                    </div>
+
+                    <!-- MARKET -->
+                    <div class="glass-panel p-5">
+                        <h3 class="text-base md:text-lg font-black text-white mb-1">Marketplace Showroom</h3>
+                        <div class="grid grid-cols-2 gap-4 mt-3">
+                            <div>
+                                <ul class="text-[11px] md:text-xs text-gray-300 font-light space-y-1.5">
+                                    <li class="flex items-start"><span class="text-white/30 mr-1.5">•</span> Creator audience interaction</li>
+                                    <li class="flex items-start"><span class="text-white/30 mr-1.5">•</span> Community validation</li>
+                                    <li class="flex items-start"><span class="text-white/30 mr-1.5">•</span> Showcase visibility</li>
+                                    <li class="flex items-start"><span class="text-white/30 mr-1.5">•</span> Audience activation</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="text-[10px] md:text-[11px] text-yellow-500 uppercase tracking-widest mb-1.5 font-bold">MONETIZES · Acquisition</p>
+                                <ul class="text-[11px] md:text-xs text-gray-400 font-light space-y-1.5">
+                                    <li class="flex items-start"><span class="text-yellow-500 mr-1.5">•</span> Platform and studio access</li>
+                                    <li class="flex items-start"><span class="text-yellow-500 mr-1.5">•</span> Distribution pathways</li>
+                                    <li class="flex items-start"><span class="text-yellow-500 mr-1.5">•</span> Commercial positioning</li>
+                                    <li class="flex items-start"><span class="text-yellow-500 mr-1.5">•</span> Acquisition opportunities</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 5: QIP METHOD -->
+    <div class="slide" id="slide-5">
+        <div class="slide-orb bg-amber-600/20 w-[600px] h-[600px] top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2"></div>
+        
+        <div class="slide-content h-full flex flex-col justify-center">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                
+                <div>
+                    <span class="tag">Development Phase</span>
+                    <h2 class="huge-title text-gradient leading-tight mb-2">QIP</h2>
+                    <h2 class="text-2xl md:text-4xl text-white font-light tracking-tight mb-4 md:mb-6">The Method</h2>
+                    <h3 class="text-base md:text-lg text-yellow-500 font-light mb-4 md:mb-6 border-l-2 border-yellow-500 pl-4">Narrative Elevation and Shielding</h3>
+                    <p class="text-sm md:text-base text-gray-300 leading-relaxed font-light">
+                        Our technology does not rewrite for the author; it acts as a tutor that <strong class="text-white font-medium">detects inconsistencies and forces the creator to think of solutions</strong> from their own narrative perspective.
+                    </p>
+                </div>
+                
+                <div class="flex flex-col gap-6">
+                    <div class="glass-panel p-6 md:p-8">
+                        <div class="flex items-center gap-3 mb-4 md:mb-6">
+                            <svg class="icon-pro mb-0 w-4 h-4" viewBox="0 0 24 24"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+                            <span class="text-[11px] md:text-xs text-gray-500 uppercase tracking-widest font-bold">Analysis Metrics</span>
+                        </div>
+                        <div class="flex items-center justify-around">
+                            <div class="text-center">
+                                <span class="text-4xl md:text-5xl text-white font-light block leading-none mb-2">20</span>
+                                <span class="text-[11px] md:text-xs text-gray-400 uppercase tracking-widest">Critical<br>Criteria</span>
+                            </div>
+                            <div class="w-px h-12 md:h-16 bg-white/10"></div>
+                            <div class="text-center">
+                                <span class="text-4xl md:text-5xl text-yellow-500 font-light block leading-none mb-2">100</span>
+                                <span class="text-[11px] md:text-xs text-gray-400 uppercase tracking-widest">Sub<br>criteria</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-panel p-6 md:p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <svg class="icon-pro mb-0 w-4 h-4" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            <span class="text-[11px] md:text-xs text-yellow-500 uppercase tracking-widest font-bold">Validation and Legal Shielding</span>
+                        </div>
+                        <ul class="space-y-3 text-xs md:text-sm text-gray-300 font-light">
+                            <li class="flex items-start"><span class="text-white/20 mr-3 mt-0.5 text-[11px] md:text-xs">→</span> Official work registration and IMDb profile.</li>
+                            <li class="flex items-start"><span class="text-white/20 mr-3 mt-0.5 text-[11px] md:text-xs">→</span> Certificate via HASH verification number.</li>
+                            <li class="flex items-start"><span class="text-white/20 mr-3 mt-0.5 text-[11px] md:text-xs">→</span> Guarantee of authorship and intellectual property.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 6: ENTRY FILTER -->
+    <div class="slide" id="slide-6">
         <div class="slide-orb bg-amber-600/20 w-[600px] h-[600px] top-1/2 right-1/4 -translate-y-1/2"></div>
         <div class="slide-content relative h-full flex flex-col">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-10 items-center flex-1">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-10 items-center flex-1">
                 
                 <div class="lg:col-span-5 flex flex-col justify-center">
-                    <span class="tag">Entry Filter</span>
-                    <h2 class="apple-heading text-gradient mb-4 md:mb-6">How a work enters the system</h2>
-                    
-                    <p class="text-xs md:text-sm text-gray-400 font-light leading-relaxed border-l-2 border-red-500/50 pl-4 mb-6">
-                        Not all works pass, ensuring a quality standard from the origin.
+                    <h2 class="apple-heading text-gradient mb-4 md:mb-6 leading-tight">QIP: How a Work enters the Platform</h2>
+                    <p class="text-xs md:text-sm text-gray-300 font-light leading-relaxed mb-6">
+                        Three stages. No arbitrary curation: every work that meets formal requirements enters the pipeline and receives structured diagnosis.
                     </p>
 
                     <!-- Volume Projection Block -->
-                    <div class="glass-panel p-5 md:p-6 border-t-yellow-500/30">
-                        <span class="text-[9px] md:text-[10px] text-yellow-500 uppercase tracking-widest font-bold mb-3 block">Volume Projection</span>
-                        <ul class="text-[11px] md:text-xs text-gray-300 font-light leading-relaxed space-y-2">
+                    <div class="glass-panel p-5 border-t-yellow-500/30">
+                        <span class="text-[11px] md:text-xs text-yellow-500 uppercase tracking-widest font-bold mb-3 block">Volume Projection</span>
+                        <ul class="text-[11px] md:text-xs text-gray-400 font-light leading-relaxed space-y-1.5">
                             <li class="flex items-start"><span class="text-yellow-500 mr-2">•</span> From 10,000 → 20,000 IPs processed</li>
                             <li class="flex items-start"><span class="text-yellow-500 mr-2">•</span> 40% advance through the QIP method</li>
                             <li class="flex items-start"><span class="text-yellow-500 mr-2">•</span> Between 4,000 and 8,000 works enter improvement and preparation processes</li>
@@ -370,26 +512,26 @@
                     </div>
                 </div>
                 
-                <div class="lg:col-span-7 relative pl-0 md:pl-6 border-l-0 md:border-l border-white/5 lg:ml-8 mt-8 lg:mt-0">
+                <div class="lg:col-span-7 relative pl-0 md:pl-6 border-l-0 md:border-l border-white/5 lg:ml-8 mt-6 lg:mt-0">
                     <div class="timeline-line hidden md:block"></div>
                     
-                    <div class="relative pl-0 md:pl-6 mb-8">
+                    <div class="relative pl-0 md:pl-6 mb-6">
                         <div class="timeline-dot hidden md:block"></div>
-                        <h3 class="text-base md:text-lg text-white font-bold mb-1">ENTERS</h3>
-                        <p class="text-[9px] text-yellow-500 uppercase tracking-widest mb-3">Certification, segmentation, and assessment</p>
-                        <div class="space-y-1.5 text-xs text-gray-400 font-light">
-                            <p><strong class="text-white font-medium">Certify:</strong> KYC (Know Your Customer), IMDb, work-author, and blockchain hash.</p>
-                            <p><strong class="text-white font-medium">Segment:</strong> Preparation for QSS (Qantica Smart System).</p>
-                            <p><strong class="text-white font-medium">Assess:</strong> Technical assessment of stylistic maturity and narrative mastery.</p>
+                        <h3 class="text-base md:text-lg text-white font-bold mb-1">ENTRY</h3>
+                        <p class="text-[10px] md:text-[11px] text-yellow-500 uppercase tracking-widest mb-2">Certification, Segmentation and Value Assessment</p>
+                        <div class="space-y-1 text-xs md:text-sm text-gray-400 font-light">
+                            <p><strong class="text-white font-medium uppercase text-[10px] md:text-[11px]">Certification:</strong> Author KYC, IMDb registration, Work-to-author linkage, Blockchain cryptographic hashing.</p>
+                            <p><strong class="text-white font-medium uppercase text-[10px] md:text-[11px]">Segmentation:</strong> Scene-based structuring, Metadata integration, Preparation for QSS analysis.</p>
+                            <p><strong class="text-white font-medium uppercase text-[10px] md:text-[11px]">Valorization:</strong> Prose maturity, Writer development stage identification.</p>
                         </div>
                     </div>
 
-                    <div class="relative pl-0 md:pl-6 mb-8">
+                    <div class="relative pl-0 md:pl-6 mb-6">
                         <div class="timeline-dot hidden md:block"></div>
-                        <h3 class="text-base md:text-lg text-white font-bold mb-1">ANALYZES</h3>
-                        <p class="text-[9px] text-yellow-500 uppercase tracking-widest mb-3">Evaluation on 20 criteria</p>
-                        <p class="text-xs text-gray-300 font-light mb-3">Blocks: <span class="text-white font-medium">Structure, Characters, Pacing, Internal Logic, Style.</span></p>
-                        <div class="flex flex-wrap gap-2 text-[10px] font-medium">
+                        <h3 class="text-base md:text-lg text-white font-bold mb-1">ANALYSIS</h3>
+                        <p class="text-[10px] md:text-[11px] text-yellow-500 uppercase tracking-widest mb-2">Aptitude Across 20 Criteria</p>
+                        <p class="text-[11px] md:text-xs text-gray-300 font-light mb-2">Structure, Characters, Pacing, Internal Logic, Style.</p>
+                        <div class="flex flex-wrap gap-2 text-[11px] md:text-xs font-medium">
                             <span class="text-red-400 px-2 py-1 bg-red-500/10 border border-red-500/20 rounded">Critical</span>
                             <span class="text-yellow-400 px-2 py-1 bg-yellow-500/10 border border-yellow-500/20 rounded">Warnings</span>
                             <span class="text-blue-400 px-2 py-1 bg-blue-500/10 border border-blue-500/20 rounded">Minor</span>
@@ -398,176 +540,209 @@
 
                     <div class="relative pl-0 md:pl-6">
                         <div class="timeline-dot hidden md:block"></div>
-                        <h3 class="text-base md:text-lg text-white font-bold mb-1">DECIDES</h3>
-                        <p class="text-[9px] text-yellow-500 uppercase tracking-widest mb-2">System resolution</p>
-                        <p class="text-xs text-gray-400 font-light">If it surpasses the threshold, it enters QIP The Method. If not, a report is delivered for the author to iterate the work.</p>
+                        <h3 class="text-base md:text-lg text-white font-bold mb-1">DECISION</h3>
+                        <p class="text-[10px] md:text-[11px] text-yellow-500 uppercase tracking-widest mb-1.5">Pipeline Entry or Return with Diagnosis</p>
+                        <p class="text-[11px] md:text-xs text-gray-400 font-light leading-relaxed">
+                            If threshold surpassed → enters QIP (Method of Curation): The Method.<br>
+                            Otherwise → receives diagnostic report for iteration.
+                        </p>
                     </div>
                 </div>
-            </div>
-            
-            <div class="mt-8 text-center pb-2">
-                <span class="text-[9px] md:text-[10px] text-yellow-500 bg-yellow-500/10 border border-yellow-500/20 px-4 md:px-6 py-2.5 rounded-full uppercase tracking-widest font-bold block sm:inline-block">
-                    Every work receives feedback for a second chance.
-                </span>
             </div>
         </div>
     </div>
 
-    <!-- SLIDE 5: QIP METHOD -->
-    <div class="slide" id="slide-5">
-        <div class="slide-orb bg-amber-600/20 w-[600px] h-[600px] top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2"></div>
-        
-        <div class="slide-content">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+    <!-- SLIDE 7: HOW THE QIP METHOD WORKS (CONNECTED ROADMAP) -->
+    <div class="slide" id="slide-7">
+        <div class="slide-orb bg-amber-600/20 w-[800px] h-[400px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="slide-content w-full h-full flex flex-col justify-center max-w-6xl mx-auto">
+            <div class="text-center mb-8">
+                <h2 class="apple-heading text-white mb-2">QIP: How the QIP Method Works, Step by Step</h2>
+            </div>
+            
+            <div class="relative w-full mb-8 pt-4">
+                <!-- Connecting Line Base -->
+                <div class="absolute top-[28px] left-[10%] right-[10%] h-px bg-white/10 z-0"></div>
+                <!-- Connecting Line Glow -->
+                <div class="hidden md:block absolute top-[27px] left-[10%] right-[10%] h-[3px] bg-gradient-to-r from-yellow-500/20 via-yellow-500 to-yellow-500/20 z-0 opacity-50 blur-[2px]"></div>
                 
-                <div>
-                    <span class="tag">Development Phase</span>
-                    <h2 class="huge-title text-gradient leading-tight mb-2">QIP</h2>
-                    <h2 class="text-2xl md:text-5xl text-white font-light tracking-tight mb-4 md:mb-6">The Method</h2>
-                    <h3 class="text-lg md:text-xl text-yellow-500 font-light mb-4 md:mb-6 border-l-2 border-yellow-500 pl-4">Narrative Elevation and Shielding</h3>
-                    <p class="text-sm md:text-base text-gray-300 leading-relaxed font-light">
-                        Our technology does not rewrite for the author; it acts as a tutor that <strong class="text-white font-medium">detects inconsistencies and forces the creator to think of solutions</strong> from their own narrative perspective.
-                    </p>
-                </div>
-                
-                <div class="flex flex-col gap-6">
-                    <div class="glass-panel p-6 md:p-8">
-                        <div class="flex items-center gap-3 mb-4 md:mb-6">
-                            <svg class="icon-pro mb-0 w-4 h-4" viewBox="0 0 24 24"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
-                            <span class="text-[9px] text-gray-500 uppercase tracking-widest font-bold">Analysis Metrics</span>
-                        </div>
-                        <div class="flex items-center justify-around">
-                            <div class="text-center">
-                                <span class="text-4xl md:text-6xl text-white font-light block leading-none mb-2">20</span>
-                                <span class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-widest">Critical<br>Criteria</span>
-                            </div>
-                            <div class="w-px h-12 md:h-16 bg-white/10"></div>
-                            <div class="text-center">
-                                <span class="text-4xl md:text-6xl text-yellow-500 font-light block leading-none mb-2">100</span>
-                                <span class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-widest">Sub<br>criteria</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-3 relative z-10">
                     
-                    <div class="glass-panel p-6 md:p-8">
-                        <div class="flex items-center gap-3 mb-4">
-                            <svg class="icon-pro mb-0 w-4 h-4" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                            <span class="text-[9px] text-yellow-500 uppercase tracking-widest font-bold">Validation and Legal Shielding</span>
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-14 h-14 rounded-full bg-[#050505] border-2 border-[#111113] group-hover:border-yellow-500 flex items-center justify-center z-10 transition-colors mb-3">
+                            <span class="text-sm font-bold text-yellow-500">1</span>
                         </div>
-                        <ul class="space-y-3 text-xs md:text-sm text-gray-300 font-light">
-                            <li class="flex items-start"><span class="text-white/20 mr-3 mt-0.5 text-[10px]">→</span> Official work registration and IMDb profile.</li>
-                            <li class="flex items-start"><span class="text-white/20 mr-3 mt-0.5 text-[10px]">→</span> Certificate via HASH verification number.</li>
-                            <li class="flex items-start"><span class="text-white/20 mr-3 mt-0.5 text-[10px]">→</span> Guarantee of authorship and intellectual property.</li>
+                        <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-2">ARRIVES</h3>
+                        <ul class="text-[11px] md:text-xs text-gray-400 font-light space-y-1">
+                            <li>Writer submits screenplay</li>
+                            <li>Validate format</li>
+                            <li>Blockchain certification</li>
                         </ul>
                     </div>
-                </div>
+                    
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-14 h-14 rounded-full bg-[#050505] border-2 border-[#111113] group-hover:border-yellow-500 flex items-center justify-center z-10 transition-colors mb-3">
+                            <span class="text-sm font-bold text-white">2</span>
+                        </div>
+                        <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-2">READS</h3>
+                        <ul class="text-[11px] md:text-xs text-gray-400 font-light space-y-1">
+                            <li>Tutor analyzes</li>
+                            <li>Creates diagnostic</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-14 h-14 rounded-full bg-[#050505] border-2 border-[#111113] group-hover:border-yellow-500 flex items-center justify-center z-10 transition-colors mb-3">
+                            <span class="text-sm font-bold text-white">3</span>
+                        </div>
+                        <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-2">RETURNS</h3>
+                        <ul class="text-[11px] md:text-xs text-gray-400 font-light space-y-1">
+                            <li>Improvement Points Index (IPM)</li>
+                            <li>Roadmap</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-14 h-14 rounded-full bg-[#050505] border-2 border-yellow-500/30 flex items-center justify-center z-10 transition-colors mb-3 shadow-[0_0_15px_rgba(250,204,21,0.2)]">
+                            <span class="text-sm font-bold text-yellow-500">4</span>
+                        </div>
+                        <h3 class="text-sm font-bold text-yellow-500 uppercase tracking-wider mb-2">ITERATES</h3>
+                        <ul class="text-[11px] md:text-xs text-gray-300 font-light space-y-1">
+                            <li>Tutor questions</li>
+                            <li>Reduce IPM</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex flex-col items-center text-center group col-span-2 md:col-span-1">
+                        <div class="w-14 h-14 rounded-full bg-[#050505] border-2 border-[#111113] group-hover:border-yellow-500 flex items-center justify-center z-10 transition-colors mb-3">
+                            <span class="text-sm font-bold text-white">5</span>
+                        </div>
+                        <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-2">SALE</h3>
+                        <ul class="text-[11px] md:text-xs text-gray-400 font-light space-y-1">
+                            <li>Threshold reached</li>
+                            <li>QSS interaction</li>
+                            <li>Commercial opportunities</li>
+                        </ul>
+                    </div>
 
+                </div>
+            </div>
+
+            <!-- Bottom 3 Boxes -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full mb-6">
+                <div class="glass-panel p-5 bg-white/[0.01]">
+                    <h4 class="text-xs md:text-sm font-bold text-yellow-500 mb-2 uppercase tracking-wide">1. Comprehensive Reading</h4>
+                    <p class="text-[11px] md:text-xs text-gray-400 font-light leading-relaxed">Analyzes narrative, format, market, and distribution to identify positioning gaps and define what needs improvement.</p>
+                </div>
+                <div class="glass-panel p-5 bg-white/[0.01]">
+                    <h4 class="text-xs md:text-sm font-bold text-yellow-500 mb-2 uppercase tracking-wide">2. Tailored Approach</h4>
+                    <p class="text-[11px] md:text-xs text-gray-400 font-light leading-relaxed">The Tutor guides structure, characters, and pacing, expanding when needed into format, audience, and distribution strategy.</p>
+                </div>
+                <div class="glass-panel p-5 bg-white/[0.01]">
+                    <h4 class="text-xs md:text-sm font-bold text-yellow-500 mb-2 uppercase tracking-wide">3. Alternative Pathways</h4>
+                    <p class="text-[11px] md:text-xs text-gray-400 font-light leading-relaxed">The system identifies the best format pathway, adapting each work across film, short-form, social, and emerging formats.</p>
+                </div>
+            </div>
+
+            <!-- Final Quote -->
+            <div class="text-center px-4 mt-auto">
+                <p class="text-xs md:text-sm text-yellow-500 font-light italic max-w-4xl mx-auto leading-relaxed">
+                    “When an IP fails to find its place, it is rarely a question of quality. What it lacked was curation, format, market positioning, or a distribution channel. The method works across all four dimensions and opens viable alternatives.”
+                </p>
             </div>
         </div>
     </div>
 
-    <!-- SLIDE 6: HOW IT WORKS IN STEPS -->
-    <div class="slide" id="slide-6">
-        <div class="slide-orb bg-amber-600/20 w-[800px] h-[400px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-        <div class="slide-content">
-            <div class="text-center mb-10 md:mb-14">
-                <span class="tag">QIP The Method</span>
-                <h2 class="apple-heading text-white mb-4">Integration Cycle</h2>
-                <p class="text-sm md:text-base text-gray-400 font-light max-w-2xl mx-auto px-4">How technology partners with the author to perfect the work to its optimal standard.</p>
-            </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-4">
-                
-                <div class="glass-panel p-4 md:p-6 flex flex-col items-center text-center">
-                    <svg class="icon-pro" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    <h3 class="text-xs md:text-sm text-white font-bold mb-1 tracking-wide uppercase">Arrives</h3>
-                    <p class="text-[10px] md:text-[11px] text-gray-400 font-light mt-2">The writer delivers the validated and certified script.</p>
-                </div>
-                
-                <div class="glass-panel p-4 md:p-6 flex flex-col items-center text-center">
-                    <svg class="icon-pro" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                    <h3 class="text-xs md:text-sm text-white font-bold mb-1 tracking-wide uppercase">Reads</h3>
-                    <p class="text-[10px] md:text-[11px] text-gray-400 font-light mt-2">The Tutor analyzes the work against the 100 sub-criteria.</p>
-                </div>
-                
-                <div class="glass-panel p-4 md:p-6 flex flex-col items-center text-center col-span-2 md:col-span-1">
-                    <svg class="icon-pro" viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-                    <h3 class="text-xs md:text-sm text-white font-bold mb-1 tracking-wide uppercase">Returns</h3>
-                    <p class="text-[10px] md:text-[11px] text-gray-400 font-light mt-2">The work receives an <strong>Improvement Point Index (IPI)</strong>.</p>
-                </div>
-                
-                <div class="glass-panel p-4 md:p-6 flex flex-col items-center text-center border border-yellow-500/30 bg-yellow-500/5">
-                    <svg class="icon-pro stroke-yellow-500" viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>
-                    <h3 class="text-xs md:text-sm text-yellow-500 font-bold mb-1 tracking-wide uppercase">Iterates</h3>
-                    <p class="text-[10px] md:text-[11px] text-gray-300 font-light mt-2">Interaction with the Tutor to iteratively optimize the <strong>IPI</strong>.</p>
-                </div>
-                
-                <div class="glass-panel p-4 md:p-6 flex flex-col items-center text-center">
-                    <svg class="icon-pro" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-                    <h3 class="text-xs md:text-sm text-white font-bold mb-1 tracking-wide uppercase">Advances</h3>
-                    <p class="text-[10px] md:text-[11px] text-gray-400 font-light mt-2">Reaches the standard and advances to QSS: QANTICA SMART SYSTEM.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- SLIDE 7: SMART SYSTEM -->
-    <div class="slide" id="slide-7">
-        <div class="slide-orb bg-amber-600/20 w-[600px] h-[600px] top-1/2 right-1/4 -translate-y-1/2"></div>
+    <!-- SLIDE 8: GAMING -->
+    <div class="slide" id="slide-8">
+        <div class="slide-orb bg-amber-600/20 w-[600px] h-[600px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
         
         <div class="slide-content">
+            <div class="text-center mb-8 md:mb-12">
+                <h2 class="apple-heading text-gradient mb-3 md:mb-4">QIP: Gaming Viability from the Earliest Stages of the Screenplay</h2>
+                <p class="text-sm md:text-lg text-gray-300 font-light max-w-2xl mx-auto px-4">Before a product enters production, we already know whether it has gaming potential.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 md:gap-6 text-center">
+                <div class="glass-panel p-5 md:p-8 flex flex-col items-center">
+                    <svg class="icon-pro mb-4" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <h3 class="text-sm md:text-base text-white font-medium mb-1 tracking-wide uppercase">DETECT</h3>
+                    <p class="text-[10px] md:text-[11px] text-yellow-500 uppercase tracking-widest mb-3">Automated Gaming Viability Analysis</p>
+                    <p class="text-[11px] md:text-xs text-gray-400 font-light leading-relaxed">Every approved screenplay is also evaluated as a potential gaming asset, without adding time to the creative process.</p>
+                </div>
+                
+                <div class="glass-panel p-5 md:p-8 flex flex-col items-center border-t border-yellow-500/30">
+                    <svg class="icon-pro mb-4 stroke-yellow-500" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2" ry="2"/><path d="M6 12h4"/><path d="M8 10v4"/></svg>
+                    <h3 class="text-sm md:text-base text-white font-medium mb-1 tracking-wide uppercase">MEASURE</h3>
+                    <p class="text-[10px] md:text-[11px] text-yellow-500 uppercase tracking-widest mb-3">Transmedia Strategy from Early Development</p>
+                    <p class="text-[11px] md:text-xs text-gray-300 font-light leading-relaxed">Game type, platform, and scale are defined before production begins. This is not a late stage spin off, but part of the project’s original packaging.</p>
+                </div>
+                
+                <div class="glass-panel p-5 md:p-8 flex flex-col items-center">
+                    <svg class="icon-pro mb-4" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                    <h3 class="text-sm md:text-base text-white font-medium mb-1 tracking-wide uppercase">DELIVERY</h3>
+                    <p class="text-[10px] md:text-[11px] text-yellow-500 uppercase tracking-widest mb-3">Game Design Document Finalized</p>
+                    <p class="text-[11px] md:text-xs text-gray-400 font-light leading-relaxed">The system generates a fully parameterized GDD, the industry standard document used for video game development, ready for studio implementation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 9: QSS SMART SYSTEM -->
+    <div class="slide" id="slide-9">
+        <div class="slide-orb bg-amber-600/20 w-[600px] h-[600px] top-1/2 right-1/4 -translate-y-1/2"></div>
+        
+        <div class="slide-content h-full flex flex-col justify-center">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-10 items-center">
                 
                 <div class="lg:col-span-5">
                     <span class="tag">Packaging Phase</span>
                     <h2 class="huge-title text-gradient leading-tight mb-2">QSS</h2>
-                    <h2 class="text-xl md:text-3xl text-white font-light tracking-tight mb-4">QANTICA SMART SYSTEM</h2>
-                    <h3 class="text-lg md:text-xl text-yellow-500 font-light mb-4 border-l-2 border-yellow-500 pl-4">Scaling the value of IP</h3>
+                    <h2 class="text-2xl md:text-4xl text-white font-light tracking-tight mb-4">QANTICA SMART SYSTEM</h2>
+                    <h3 class="text-lg md:text-xl text-white font-light mb-2 border-l-2 border-yellow-500 pl-4">The Intelligence Layer Connecting Each Work to its Market</h3>
+                    <p class="text-sm md:text-base text-yellow-500 font-medium mb-3">QSS does not change the work.</p>
                     <p class="text-xs md:text-sm text-gray-300 leading-relaxed font-light">
-                        The scalable ecosystem. This phase is automatically activated once the script is validated and closed by QIP The Method.
+                        It analyzes it, contextualizes it, and positions it. It operates in parallel with QIP throughout narrative improvement, delivering to the Marketplace an IP with a clearly defined sales roadmap.
                     </p>
                 </div>
                 
                 <div class="lg:col-span-7 flex flex-col gap-4">
                     <div class="glass-panel p-4 md:p-5">
-                        <div class="flex items-center gap-4">
-                            <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-yellow-500 font-bold border border-white/10 shrink-0 text-xs">1</div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-yellow-500 font-bold border border-white/10 shrink-0 text-sm mt-1">1</div>
                             <div>
-                                <h3 class="text-sm text-white font-bold uppercase tracking-wider mb-1">Creation and Development</h3>
-                                <p class="text-[10px] md:text-[11px] text-gray-400 font-light">Packaging: Visual dossier, teasers, financial structure, and transmedia design.</p>
+                                <h3 class="text-sm md:text-base text-white font-bold uppercase tracking-wider mb-1">CONNECTS</h3>
+                                <p class="text-[10px] md:text-[11px] text-yellow-500 uppercase tracking-widest mb-1.5">Exchange with QIP</p>
+                                <p class="text-[11px] md:text-xs text-gray-400 font-light">It connects every narrative decision to market context. While the Tutor strengthens the work, QSS identifies its audience, the formats it supports, and the commercial positioning it can realistically achieve. Improvement is never done blindly.</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="glass-panel p-4 md:p-5">
-                        <div class="flex items-center gap-4">
-                            <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-yellow-500 font-bold border border-white/10 shrink-0 text-xs">2</div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-yellow-500 font-bold border border-white/10 shrink-0 text-sm mt-1">2</div>
                             <div>
-                                <h3 class="text-sm text-white font-bold uppercase tracking-wider mb-1">Audience</h3>
-                                <p class="text-[10px] md:text-[11px] text-gray-400 font-light">Community building, target identification, and pre-marketing.</p>
+                                <h3 class="text-sm md:text-base text-white font-bold uppercase tracking-wider mb-1">PACKAGES</h3>
+                                <p class="text-[10px] md:text-[11px] text-yellow-500 uppercase tracking-widest mb-1.5">Complete Transmedia Strategy</p>
+                                <p class="text-[11px] md:text-xs text-gray-400 font-light">QSS builds the complete package: budget, scale, cast, gaming, music, and merchandising. The work evolves from a well told screenplay into an IP with projected value.</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="glass-panel p-4 md:p-5">
-                        <div class="flex items-center gap-4">
-                            <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-yellow-500 font-bold border border-white/10 shrink-0 text-xs">3</div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-yellow-500 font-bold border border-white/10 shrink-0 text-sm mt-1">3</div>
                             <div class="w-full">
-                                <h3 class="text-sm text-white font-bold uppercase tracking-wider mb-1 md:mb-2">Distribution</h3>
-                                <p class="text-[9px] md:text-[11px] text-gray-500 uppercase tracking-widest mb-2">Maximization of ROI (Return on Investment)</p>
-                                <div class="flex flex-wrap gap-2 text-[10px] font-medium text-white">
-                                    <span class="bg-white/10 px-2 py-1 rounded">Film</span>
-                                    <span class="bg-white/10 px-2 py-1 rounded">Series</span>
-                                    <span class="bg-white/10 px-2 py-1 rounded">9:16</span>
-                                </div>
+                                <h3 class="text-sm md:text-base text-white font-bold uppercase tracking-wider mb-1">POSITIONS</h3>
+                                <p class="text-[10px] md:text-[11px] text-yellow-500 uppercase tracking-widest mb-1.5">Marketplace Placement Roadmap</p>
+                                <p class="text-[11px] md:text-xs text-gray-400 font-light">Once the work reaches the threshold, QSS delivers it with a complete market roadmap: identified audience, optimal channels, and suggested format. Commercial positioning no longer starts from zero.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="mt-2 border border-yellow-500/30 bg-yellow-500/5 p-4 rounded-xl flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                        <svg class="icon-pro stroke-yellow-500 shrink-0 mb-0 w-5 h-5" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2" ry="2"/><path d="M6 12h4"/><path d="M8 10v4"/><path d="M15 13h.01"/><path d="M18 11h.01"/></svg>
-                        <p class="text-[10px] md:text-[11px] text-gray-300 font-light leading-relaxed">
-                            <strong class="text-yellow-500 font-medium">Transmedia Vision:</strong> Evaluation as a gameable asset. We deliver a parameterized GDD (Game Design Document: base document for designing and producing video games) ready for production.
+                    <div class="mt-2 text-center p-2 md:p-4">
+                        <p class="text-xs md:text-sm text-yellow-500 font-light italic leading-relaxed">
+                            “QSS is what transforms a screenplay into an IP ready for the market.”
                         </p>
                     </div>
                 </div>
@@ -576,8 +751,8 @@
         </div>
     </div>
 
-    <!-- SLIDE 8: GO TO MARKET -->
-    <div class="slide" id="slide-8">
+    <!-- SLIDE 10: MARKETPLACE -->
+    <div class="slide" id="slide-10">
         <div class="slide-orb bg-amber-600/20 w-[600px] h-[600px] top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2"></div>
 
         <div class="slide-content">
@@ -585,37 +760,44 @@
                 
                 <div>
                     <span class="tag">Launch Phase</span>
-                    <h2 class="huge-title text-gradient leading-tight mb-2 tracking-tighter">MARKET</h2>
-                    <h2 class="text-2xl md:text-5xl text-white font-light tracking-tight mb-4 md:mb-6">Validation and Auction</h2>
+                    <h2 class="huge-title text-gradient leading-tight mb-2 tracking-tighter">MARKETPLACE</h2>
+                    <h2 class="text-2xl md:text-4xl text-white font-light tracking-tight mb-4 md:mb-6">Public Discovery, Private Commercialization</h2>
                     <p class="text-sm md:text-lg text-gray-300 font-light leading-relaxed">
-                        Once demand is validated, the project enters the final exposure phase.
+                        Two environments, one destination. The work gains validation through its community while being presented exclusively to platforms and studios.
                     </p>
                 </div>
                 
                 <div class="space-y-6">
                     <div class="glass-panel p-6 md:p-8 border-l-2 border-yellow-500">
-                        <h3 class="text-white font-medium text-base md:text-lg mb-2 flex items-center gap-3">
-                            <svg class="icon-pro mb-0 w-4 h-4" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                            Real Demand Validation
+                        <h3 class="text-white font-medium text-base md:text-lg mb-1 flex items-center gap-3">
+                            <svg class="icon-pro mb-0 w-5 h-5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            SHOWROOM
                         </h3>
-                        <p class="text-xs md:text-sm text-gray-400 font-light leading-relaxed">Testing environment with real audiences under NDA (Non-Disclosure Agreement). We measure real validation before advancing.</p>
+                        <p class="text-[10px] md:text-[11px] text-yellow-500 uppercase tracking-widest mb-3">Public Showcase</p>
+                        <ul class="text-xs md:text-sm text-gray-400 font-light leading-relaxed space-y-1">
+                            <li>· Final version including all QIP and QSS analyses</li>
+                            <li>· Connection with the creator’s community and other creator communities</li>
+                            <li>· A differentiated catalog presentation format</li>
+                            <li>· New commercial pathways (e.g. crowdfunding)</li>
+                        </ul>
                     </div>
                     <div class="glass-panel p-6 md:p-8 border-l border-white/20">
-                        <h3 class="text-white font-medium text-base md:text-lg mb-2 flex items-center gap-3">
-                            <svg class="icon-pro mb-0 w-4 h-4" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                            Strategic Auction
+                        <h3 class="text-white font-medium text-base md:text-lg mb-1 flex items-center gap-3">
+                            <svg class="icon-pro mb-0 w-5 h-5" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                            ACQUISITION
                         </h3>
-                        <p class="text-xs md:text-sm text-gray-400 font-light leading-relaxed">With success data, we open the bidding. The market competes for the content to ensure the best sale.</p>
+                        <p class="text-[10px] md:text-[11px] text-yellow-500 uppercase tracking-widest mb-3">Private Acquisition</p>
+                        <ul class="text-xs md:text-sm text-gray-400 font-light leading-relaxed space-y-1">
+                            <li>· Exclusive access for authorized clients</li>
+                            <li>· Auction based access for streaming platforms and studios</li>
+                            <li>· Distribution across social platforms including YouTube, TikTok, and Instagram</li>
+                        </ul>
                     </div>
                     
-                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3 text-[10px] font-medium text-gray-400 uppercase tracking-widest">
-                        <span class="bg-white/5 px-3 py-1.5 rounded border border-white/10 w-full sm:w-auto text-center">Validation</span>
-                        <span class="text-yellow-500 hidden sm:inline">→</span>
-                        <span class="text-yellow-500 sm:hidden">↓</span>
-                        <span class="bg-yellow-500/10 text-yellow-500 px-3 py-1.5 rounded border border-yellow-500/30 w-full sm:w-auto text-center">Auction and Bidding</span>
-                        <span class="text-yellow-500 hidden sm:inline">→</span>
-                        <span class="text-yellow-500 sm:hidden">↓</span>
-                        <span class="bg-white/5 px-3 py-1.5 rounded border border-white/10 w-full sm:w-auto text-center">IP Sale</span>
+                    <div class="pt-4 text-center">
+                        <p class="text-[11px] md:text-sm text-yellow-500 font-light italic leading-relaxed">
+                            “An innovation driven model that maximizes IP value and elevates the quality of commercial exposure at scale.”
+                        </p>
                     </div>
                 </div>
 
@@ -623,240 +805,15 @@
         </div>
     </div>
 
-    <!-- SLIDE 9: VALUE CYCLE -->
-    <div class="slide" id="slide-9">
-        <div class="slide-content">
-            <div class="text-center mb-6 md:mb-8">
-                <span class="tag">The Value Cycle</span>
-                <h2 class="apple-heading text-gradient mb-2">Transversal Intelligence</h2>
-                <p class="text-xs md:text-sm text-gray-400 font-light max-w-2xl mx-auto">How the three pillars of QANTICA are articulated in the ecosystem.</p>
-            </div>
-            
-            <div class="flex flex-col gap-4 w-full max-w-4xl mx-auto">
-                
-                <div class="glass-panel p-5 md:p-6 text-center border-t border-yellow-500/50 relative bg-yellow-500/5">
-                    <h3 class="text-xl md:text-2xl font-black text-white mb-1">QSS: QANTICA SMART SYSTEM</h3>
-                    <p class="text-[8px] md:text-[9px] text-yellow-500 uppercase tracking-widest mb-3">The Brain · Market analysis and distribution</p>
-                    <div class="flex flex-wrap justify-center gap-3 md:gap-6 text-[10px] md:text-[11px] text-gray-300 font-light">
-                        <span>Transmedia development</span>
-                        <span class="text-white/20 hidden md:inline">|</span>
-                        <span>Marketing</span>
-                        <span class="text-white/20 hidden md:inline">|</span>
-                        <span>Distribution</span>
-                    </div>
-                </div>
-
-                <div class="flex justify-center -my-2 relative z-20">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="4" x2="12" y2="20"></line><polyline points="18 14 12 20 6 14"></polyline></svg>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                    <div class="glass-panel p-5 md:p-6 text-center flex flex-col">
-                        <h3 class="text-lg md:text-xl font-black text-white mb-1">QIP The Method</h3>
-                        <p class="text-[8px] md:text-[9px] text-gray-500 uppercase tracking-widest mb-3 md:mb-4 border-b border-white/10 pb-2 md:pb-3">Work Optimization</p>
-                        <ul class="text-[10px] md:text-[11px] text-gray-400 font-light space-y-2 flex-1">
-                            <li>Interactive Tutor</li>
-                            <li>Narrative Analysis</li>
-                            <li>Blockchain Certification</li>
-                        </ul>
-                    </div>
-
-                    <div class="glass-panel p-5 md:p-6 text-center flex flex-col border-t md:border-t-0 md:border-l border-white/10">
-                        <h3 class="text-lg md:text-xl font-black text-white mb-1">MARKET</h3>
-                        <p class="text-[8px] md:text-[9px] text-gray-500 uppercase tracking-widest mb-3 md:mb-4 border-b border-white/10 pb-2 md:pb-3">Monetization and Sale</p>
-                        <ul class="text-[10px] md:text-[11px] text-gray-400 font-light space-y-2 flex-1">
-                            <li>IP Auctions</li>
-                            <li>Audience validation</li>
-                            <li>Commercial activation</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- SLIDE 10: GAMING -->
-    <div class="slide" id="slide-10">
-        <div class="slide-orb bg-amber-600/20 w-[600px] h-[600px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-        
-        <div class="slide-content">
-            <div class="text-center mb-8 md:mb-12">
-                <span class="tag">Gaming Qantica</span>
-                <h2 class="apple-heading text-white mb-3 md:mb-4">Every script, two products</h2>
-                <p class="text-sm md:text-base text-gray-300 font-light max-w-xl mx-auto px-4">Before a project enters production, we already know if it has a game inside.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 md:gap-6 text-center">
-                <div class="glass-panel p-5 md:p-6 flex flex-col items-center">
-                    <svg class="icon-pro mb-3" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                    <h3 class="text-sm md:text-base text-white font-medium mb-1 tracking-wide">Detect</h3>
-                    <p class="text-[8px] md:text-[9px] text-yellow-500 uppercase tracking-widest mb-3">Automatic ludic reading</p>
-                    <p class="text-[11px] md:text-xs text-gray-400 font-light leading-relaxed">Every approved script is evaluated as a gameable asset, without adding time to the creative process.</p>
-                </div>
-                
-                <div class="glass-panel p-5 md:p-6 flex flex-col items-center border-t border-yellow-500/30">
-                    <svg class="icon-pro mb-3 stroke-yellow-500" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2" ry="2"/><path d="M6 12h4"/><path d="M8 10v4"/></svg>
-                    <h3 class="text-sm md:text-base text-white font-medium mb-1 tracking-wide">Dimension</h3>
-                    <p class="text-[8px] md:text-[9px] text-yellow-500 uppercase tracking-widest mb-3">Transmedia decision</p>
-                    <p class="text-[11px] md:text-xs text-gray-300 font-light leading-relaxed">Game type and platform defined before the clapperboard. It's not a spin-off. <strong class="text-white">It's original packaging.</strong></p>
-                </div>
-                
-                <div class="glass-panel p-5 md:p-6 flex flex-col items-center">
-                    <svg class="icon-pro mb-3" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-                    <h3 class="text-sm md:text-base text-white font-medium mb-1 tracking-wide">Deliver</h3>
-                    <p class="text-[8px] md:text-[9px] text-yellow-500 uppercase tracking-widest mb-3">Game Design Document</p>
-                    <p class="text-[11px] md:text-xs text-gray-400 font-light leading-relaxed">The system delivers a parameterized GDD ready for any studio to take as a base.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- SLIDE 11: ALTERNATIVES -->
+    <!-- SLIDE 11: CLOSING -->
     <div class="slide" id="slide-11">
-        <div class="slide-orb bg-amber-600/20 w-[600px] h-[600px] top-1/2 right-1/4 -translate-y-1/2"></div>
-        <div class="slide-content">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-10 items-start">
-                
-                <div class="lg:col-span-5">
-                    <span class="tag">More than one path Qantica</span>
-                    <h2 class="apple-heading text-gradient mb-4 md:mb-6">Alternatives for each IP</h2>
-                    <p class="text-xs md:text-sm text-gray-300 font-light leading-relaxed mb-4">
-                        When an IP doesn't find its place, it's almost never about quality. It lacked curation, format, market, or channel.
-                    </p>
-                    <p class="text-xs md:text-sm text-gray-500 font-light leading-relaxed">
-                        QIP The Method works the four dimensions and opens concrete alternatives, fluidly connecting with QSS: QANTICA SMART SYSTEM.
-                    </p>
-                </div>
-                
-                <div class="lg:col-span-7 flex flex-col gap-4 md:gap-5">
-                    <div class="glass-panel p-4 md:p-5 flex flex-col sm:flex-row gap-3 sm:gap-4 items-start sm:items-center">
-                        <div class="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/10 flex items-center justify-center shrink-0">
-                            <svg class="icon-pro mb-0 w-3 h-3 md:w-4 md:h-4 stroke-white/50" viewBox="0 0 24 24"><path d="M2 12h4l2-9 5 18 2-9h5"/></svg>
-                        </div>
-                        <div>
-                            <h3 class="text-sm text-white font-medium mb-1">1. Diagnose</h3>
-                            <p class="text-[11px] md:text-xs text-gray-400 font-light">Reading in dimensions: Narrative, Format, Market, and Channel. <span class="italic text-gray-500">Identifies what it lacked to be placed.</span></p>
-                        </div>
-                    </div>
-
-                    <div class="glass-panel p-4 md:p-5 flex flex-col sm:flex-row gap-3 sm:gap-4 items-start sm:items-center border-l-2 border-yellow-500/50">
-                        <div class="w-8 h-8 md:w-10 md:h-10 rounded-full border border-yellow-500/30 flex items-center justify-center shrink-0 bg-yellow-500/5">
-                            <svg class="icon-pro mb-0 w-3 h-3 md:w-4 md:h-4 stroke-yellow-500" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-                        </div>
-                        <div>
-                            <h3 class="text-sm text-white font-medium mb-1">2. Intervene</h3>
-                            <p class="text-[11px] md:text-xs text-gray-400 font-light">Tailored treatment in Structure, Characters, and Pacing with mapping to new format using QSS.</p>
-                        </div>
-                    </div>
-
-                    <div class="glass-panel p-4 md:p-5 flex flex-col sm:flex-row gap-3 sm:gap-4 items-start sm:items-center">
-                        <div class="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/10 flex items-center justify-center shrink-0">
-                            <svg class="icon-pro mb-0 w-3 h-3 md:w-4 md:h-4 stroke-white/50" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
-                        </div>
-                        <div>
-                            <h3 class="text-sm text-white font-medium mb-2">3. Project</h3>
-                            <div class="flex flex-wrap gap-2 text-[9px] md:text-[10px] font-medium text-white uppercase tracking-wider">
-                                <span class="bg-white/5 px-2 py-1 rounded border border-white/5">Vertical series</span>
-                                <span class="bg-white/5 px-2 py-1 rounded border border-white/5">Short series</span>
-                                <span class="bg-white/5 px-2 py-1 rounded border border-white/5">YouTube</span>
-                                <span class="bg-white/5 px-2 py-1 rounded border border-white/5">Social Media</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- SLIDE 12: REAL CASES (WRITERS TESTS) -->
-    <div class="slide" id="slide-12">
-        <div class="slide-orb bg-amber-600/10 w-[800px] h-[500px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-        <div class="slide-content h-full flex flex-col justify-center">
-            <div class="text-center mb-6 md:mb-8">
-                <span class="tag">Writers Tests</span>
-                <h2 class="apple-heading text-white mb-2 md:mb-4 leading-tight">Real authors. Real feedback.<br>A method put to the test.</h2>
-                <p class="text-sm md:text-base text-gray-400 font-light max-w-3xl mx-auto px-4">Screenwriters and creators who worked with Qantica share how they experienced the process and what value they found in the method.</p>
-            </div>
-
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 flex-1">
-                
-                <!-- 1. Leandro -->
-                <div class="glass-panel p-4 md:p-5 flex flex-col items-center text-center group h-full">
-                    <div class="w-14 h-14 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-white/10 mb-3 group-hover:border-yellow-500 transition-colors bg-charcoal shrink-0">
-                        <img src="Leandro.png" alt="Leandro Filozof" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23666\' stroke-width=\'1\'><circle cx=\'12\' cy=\'8\' r=\'4\'/><path d=\'M20 21a8 8 0 00-16 0\'/></svg>'">
-                    </div>
-                    <h3 class="text-sm md:text-base text-white font-medium mb-1">Leandro Filozof</h3>
-                    <p class="text-[8px] md:text-[9px] text-gray-500 uppercase tracking-widest mb-3 md:mb-4">Screenwriter</p>
-                    <p class="text-[9px] md:text-[10px] text-gray-400 font-light italic leading-relaxed mb-4 flex-1">"I thought it would be a learning process about my scripts and my writing — a fun journey, and it truly was."</p>
-                    <a href="https://www.imdb.com/name/nm9854799/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#F5C518] hover:bg-[#E2B616] text-black px-3 py-1.5 rounded-md text-[10px] font-black transition-colors w-max mx-auto">
-                        IMDb
-                        <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                    </a>
-                </div>
-
-                <!-- 2. Pablo -->
-                <div class="glass-panel p-4 md:p-5 flex flex-col items-center text-center group h-full">
-                    <div class="w-14 h-14 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-white/10 mb-3 group-hover:border-yellow-500 transition-colors bg-charcoal shrink-0">
-                        <img src="Pablo.png" alt="Pablo Flores" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23666\' stroke-width=\'1\'><circle cx=\'12\' cy=\'8\' r=\'4\'/><path d=\'M20 21a8 8 0 00-16 0\'/></svg>'">
-                    </div>
-                    <h3 class="text-sm md:text-base text-white font-medium mb-1">Pablo Flores</h3>
-                    <p class="text-[8px] md:text-[9px] text-gray-500 uppercase tracking-widest mb-3 md:mb-4">Screenwriter / Producer</p>
-                    <p class="text-[9px] md:text-[10px] text-gray-400 font-light italic leading-relaxed mb-4 flex-1">"I was genuinely surprised by the level of detail in each analysis."</p>
-                    <a href="https://www.imdb.com/name/nm12896249/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#F5C518] hover:bg-[#E2B616] text-black px-3 py-1.5 rounded-md text-[10px] font-black transition-colors w-max mx-auto">
-                        IMDb
-                        <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                    </a>
-                </div>
-
-                <!-- 3. Natalia -->
-                <div class="glass-panel p-4 md:p-5 flex flex-col items-center text-center group h-full">
-                    <div class="w-14 h-14 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-white/10 mb-3 group-hover:border-yellow-500 transition-colors bg-charcoal shrink-0">
-                        <img src="Natalia.png" alt="Natalia Torres" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23666\' stroke-width=\'1\'><circle cx=\'12\' cy=\'8\' r=\'4\'/><path d=\'M20 21a8 8 0 00-16 0\'/></svg>'">
-                    </div>
-                    <h3 class="text-sm md:text-base text-white font-medium mb-1">Natalia Torres</h3>
-                    <p class="text-[8px] md:text-[9px] text-gray-500 uppercase tracking-widest mb-3 md:mb-4">Screenwriter / Author</p>
-                    <p class="text-[9px] md:text-[10px] text-gray-400 font-light italic leading-relaxed mb-4 flex-1">"Qantica helped me realize that I’d like to trust my own voice more, without relying so heavily on external validation."</p>
-                    <a href="https://www.imdb.com/name/nm1678325/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#F5C518] hover:bg-[#E2B616] text-black px-3 py-1.5 rounded-md text-[10px] font-black transition-colors w-max mx-auto">
-                        IMDb
-                        <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                    </a>
-                </div>
-
-                <!-- 4. Gabriel -->
-                <div class="glass-panel p-4 md:p-5 flex flex-col items-center text-center group h-full">
-                    <div class="w-14 h-14 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-white/10 mb-3 group-hover:border-yellow-500 transition-colors bg-charcoal shrink-0">
-                        <img src="Gabriel.png" alt="Gabriel Macías" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23666\' stroke-width=\'1\'><circle cx=\'12\' cy=\'8\' r=\'4\'/><path d=\'M20 21a8 8 0 00-16 0\'/></svg>'">
-                    </div>
-                    <h3 class="text-sm md:text-base text-white font-medium mb-1">Gabriel Macías</h3>
-                    <p class="text-[8px] md:text-[9px] text-gray-500 uppercase tracking-widest mb-3 md:mb-4">Screenwriter</p>
-                    <p class="text-[9px] md:text-[10px] text-gray-400 font-light italic leading-relaxed mb-4 flex-1">"An extraordinary platform that expands awareness, and I’m excited to be part of this global project."</p>
-                    <a href="https://www.imdb.com/name/nm0989224/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#F5C518] hover:bg-[#E2B616] text-black px-3 py-1.5 rounded-md text-[10px] font-black transition-colors w-max mx-auto">
-                        IMDb
-                        <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                    </a>
-                </div>
-
-            </div>
-            
-            <div class="mt-8 md:mt-10 text-center">
-                <span class="text-[9px] md:text-[10px] text-yellow-500 bg-yellow-500/10 border border-yellow-500/20 px-4 md:px-6 py-2 md:py-2.5 rounded-full uppercase tracking-widest font-bold inline-block">
-                    More than 100+ creators are already joining
-                </span>
-            </div>
-        </div>
-    </div>
-
-    <!-- SLIDE 13: CLOSING -->
-    <div class="slide" id="slide-13">
         <div class="slide-orb bg-amber-600/20 w-[800px] h-[800px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
         <div class="slide-content text-center items-center h-full flex flex-col justify-center max-h-[85vh]">
             
             <img src="qantica.png" alt="QANTICA Logo" class="qantica-logo opacity-90" onerror="this.outerHTML='<h1 class=\'text-[4rem] md:text-[8rem] font-black text-gradient leading-none mb-4 tracking-tighter\'>QANTICA</h1>'">
             
-            <h2 class="text-lg md:text-3xl text-white font-light tracking-tight mb-4 md:mb-6 max-w-3xl mx-auto leading-tight mt-2 md:mt-6">The future of entertainment begins before production.</h2>
-            <p class="text-[10px] md:text-sm font-medium text-gray-500 tracking-[0.3em] uppercase">Developing smarter IP.</p>
+            <h2 class="text-xl md:text-4xl text-white font-light tracking-tight mb-4 md:mb-6 max-w-4xl mx-auto leading-tight mt-2 md:mt-6">The future of entertainment begins before production.</h2>
+            <p class="text-xs md:text-base font-medium text-gray-400 tracking-[0.3em]">Developing Smarter IP</p>
         </div>
     </div>
 
@@ -865,7 +822,7 @@
         <button class="control-btn" id="prevBtn" onclick="prevSlide()" aria-label="Previous">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
         </button>
-        <span id="slideCounter" class="text-white/40 flex items-center font-medium text-[10px] md:text-xs px-1 md:px-2 tracking-widest">1 / 13</span>
+        <span id="slideCounter" class="text-white/40 flex items-center font-medium text-[11px] md:text-xs px-1 md:px-2 tracking-widest">1 / 11</span>
         <button class="control-btn" id="nextBtn" onclick="nextSlide()" aria-label="Next">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
         </button>
@@ -873,7 +830,7 @@
 
     <script>
         let currentSlide = 1;
-        const totalSlides = 13;
+        const totalSlides = 11;
 
         function updateCounter() {
             document.getElementById('slideCounter').innerText = `${currentSlide} / ${totalSlides}`;
